@@ -1,0 +1,40 @@
+create admin and vendor controll er and modl 
+create route web and asign middle ware admin 
+create config/auth.php and create 
+
+1.namespace App\Models;
+
+use Illuminate\Foundation\Auth\User as Authenticatable;
+   protected $guard = 'admin';
+
+
+2.namespace App\Http\kernel;
+    'admin'=>\App\Http\Middleware\Admin::class,
+
+'guards' => [
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
+    ],
+    'admin' => [
+        'driver' => 'session',
+        'provider' => 'admins',
+    ],
+],
+
+3. namespace App\Http\Middleware;
+
+   public function handle(Request $request, Closure $next)
+    {
+        if(!Auth::guard('admin')->check()){
+            return redirect('/admin/login');
+        }
+        return $next($request);
+    }
+4. https://www.browserling.com/tools/bcrypt // generate hash key
+	
+superadmin 
+   password 123456
+
+5. https://xpertphp.com/laravel-9-toastr-notifications-example-tutorial/   // toaster message
+6.composer require intervention/image install for image

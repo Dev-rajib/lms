@@ -6,10 +6,30 @@
     background: #f5f5f5;
 }
 .mainCon{
-	width: 85%; float: left
+	width: 85%; float: left;
+	background: #fff;
+	padding: 10px;
 }
 .leftCon .panel-heading{
     padding: 12px 5px ;
+}
+.stretch-card{
+	padding:10px;
+}
+.table-responsive{
+	overflow-x:none !important;
+	width: 100%;
+}
+.dataTables_wrapper {
+	width: 99%;
+}
+
+.addButton{
+	max-width: 150px; float: right; display: inline-block;
+	padding-right: 17px;
+}
+#employees thead tr{
+	background-color: #C7D36F;
 }
 
 

@@ -3,7 +3,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-6">
-                                2016 © Moltran.
+                                2022 © Reeyaaz.
                             </div>
                             <div class="col-xs-6">
                                 <ul class="pull-right list-inline m-b-0">

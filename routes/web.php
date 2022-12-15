@@ -44,6 +44,15 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
 		// update admin details
 		Route::match(['get','post'],'update-admin-details','AdminController@updateAdminDetails');
 		Route::get('logout','AdminController@logout');
+
+
+		// employee 
+		Route::controller(EmployeeController::class)->group(function(){
+			Route::get('employees','employees');
+			Route::post('/update-employee-status','updateemployeeStatus');
+			Route::get('/delete-employee/{id}','deleteEmployee');
+			Route::match(['get','post'],'add-edit-employee/{id?}','addEditEmployee');
+		});
 	});
 });
 

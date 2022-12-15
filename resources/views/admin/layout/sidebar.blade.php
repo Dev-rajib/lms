@@ -16,7 +16,7 @@
                             <table class="table">
                                 <tr>
                                     <td>
-                                        <i class="fa fa-pencil text-primary"></i> <a href="">Employees</a>
+                                        <i class="fa fa-pencil text-primary"></i> <a href="{{url('admin/employees')}}">Employees</a>
                                     </td>
                                 </tr>
                                 <tr>

@@ -12,7 +12,13 @@
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-        <link href="{{url('admin/assets/plugins/sweetalert/dist/sweetalert.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{url('admin/assets/plugins/datatables/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{url('admin/assets/plugins/datatables/buttons.bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{url('admin/assets/plugins/datatables/fixedHeader.bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{url('admin/assets/plugins/datatables/responsive.bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{url('admin/assets/plugins/datatables/scroller.bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+
+        <link href="{{url('admin/assets/plugins/sweetalert/dist/sweetalert2.css')}}" rel="stylesheet" type="text/css">
 
         <link href="{{url('admin/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
         <link href="{{url('admin/assets/css/core.css')}}" rel="stylesheet" type="text/css">
@@ -101,10 +107,35 @@
         <!-- dashboard  -->
         <script src="{{url('admin/assets/pages/jquery.dashboard.js')}}"></script>
 
+        <script src="{{url('admin/assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/dataTables.bootstrap.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/dataTables.buttons.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/buttons.bootstrap.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/jszip.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/pdfmake.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/vfs_fonts.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/buttons.html5.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/buttons.print.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/dataTables.fixedHeader.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/dataTables.keyTable.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/dataTables.responsive.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/responsive.bootstrap.min.js')}}"></script>
+        <script src="{{url('admin/assets/plugins/datatables/dataTables.scroller.min.js')}}"></script>
+        <script src="{{url('admin/assets/pages/datatables.init.js')}}"></script>
+
+        <script src="{{url('admin/assets/js/jquery.app.js')}}"></script>
+
        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
        <script src="{{url('admin/assets/js/custom.js')}}"></script>
 
-
+       <script type="text/javascript">
+            $(document).ready(function() {
+                $('#employees').DataTable();
+                
+            } );
+            TableManageButtons.init();
+        </script>
  
  
 

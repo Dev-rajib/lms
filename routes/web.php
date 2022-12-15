@@ -52,6 +52,7 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
 			Route::post('/update-employee-status','updateemployeeStatus');
 			Route::get('/delete-employee/{id}','deleteEmployee');
 			Route::match(['get','post'],'add-edit-employee/{id?}','addEditEmployee');
+			Route::get('delete-employee-image/{id}','deleteEmployeeImage');
 		});
 	});
 });
